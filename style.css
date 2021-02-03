@@ -98,6 +98,9 @@ body {
   display: flex;
   align-items: center;
 }
+.matchButton h2 {
+  color: #00477b;
+}
 
 .teamContainer {
   display: flex;
