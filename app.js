@@ -21,11 +21,31 @@ function showMatches(data) {
   const matches = data.data;
   const container = document.getElementById("match-container");
   matches.map((item) => {
-    const button = document.createElement("button");
-    const text = document.createTextNode(
-      item.home_team.full_name + " VS " + item.visitor_team.full_name
-    );
-    button.appendChild(text);
+    const button = document.createElement("div");
+    const VSTextEl = document.createElement("h2");
+    const homeP = document.createElement("p");
+    const visitorP = document.createElement("p");
+    const homeText = document.createTextNode(item.home_team.full_name);
+    const visitorsText = document.createTextNode(item.visitor_team.full_name);
+    const VSText = document.createTextNode("VS");
+    const teamContainer = document.createElement("div");
+    teamContainer.classList.add("teamContainer");
+    button.classList.add("matchButton");
+
+    // H2 element will be placed in the button
+    button.appendChild(VSTextEl);
+    // This H2 gets the right tekst in it
+    VSTextEl.appendChild(VSText);
+
+    homeP.appendChild(homeText);
+    visitorP.appendChild(visitorsText);
+
+    // Div element will be placed in the button and will recieve a home and visitors tekst
+    button.appendChild(teamContainer);
+    teamContainer.appendChild(homeP);
+    teamContainer.appendChild(visitorP);
+
+    // This button will be placed in its container
     button.setAttribute("name", item.id);
     container.appendChild(button);
   });
@@ -34,7 +54,7 @@ function showMatches(data) {
 
 function getOverlay(data) {
   const overlay = document.getElementById("overlay");
-  const buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll(".matchButton");
   Array.prototype.forEach.call(buttons, function (button) {
     button.addEventListener("click", () => {
       const gameAtribute = button.getAttribute("name");
@@ -56,7 +76,15 @@ function getOverlayData(data) {
 }
 
 function fillOverlayWithData(match) {
-  const overlayHeading = document.getElementById("game-title");
-  overlayHeading.innerText =
-    match.home_team.full_name + " VS " + match.visitor_team.full_name;
+  const homeTitle = document.getElementById("home-title");
+  const visitorTitle = document.getElementById("visitor-title");
+
+  const homeScore = document.getElementById("home-score");
+  const visitorScore = document.getElementById("visitor-score");
+
+  homeTitle.innerText = match.home_team.full_name;
+  visitorTitle.innerText = match.visitor_team.full_name;
+
+  homeScore.innerText = match.home_team_score;
+  visitorScore.innerText = match.visitor_team_score;
 }
