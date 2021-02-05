@@ -1,5 +1,6 @@
 function getData() {
-  fetch("https://free-nba.p.rapidapi.com/games?page=0&per_page=50", {
+  // "https://free-nba.p.rapidapi.com/games?page=0&team_ids=1%2C2%2C3&per_page=25",
+  fetch("https://free-nba.p.rapidapi.com/games?team_ids=2&per_page=25", {
     method: "GET",
     headers: {
       "x-rapidapi-key": "85d43d1b47msh7273a9c7d1d5c94p1b0a1cjsnbc483a52d1e3",
