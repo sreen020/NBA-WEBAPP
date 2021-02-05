@@ -11,47 +11,45 @@ function getData() {
 }
 
 getData();
-
+/**
+ *
+ * @param {object} data
+ */
 function main(data) {
   console.log(data);
   showMatches(data);
 }
 
+/**
+ *
+ * @param {object} data
+ */
 function showMatches(data) {
-  const matches = data.data;
   const container = document.getElementById("match-container");
+  const matches = data.data;
   matches.map((item) => {
     const button = document.createElement("div");
-    const VSTextEl = document.createElement("h2");
-    const homeP = document.createElement("p");
-    const visitorP = document.createElement("p");
-    const homeText = document.createTextNode(item.home_team.full_name);
-    const visitorsText = document.createTextNode(item.visitor_team.full_name);
-    const VSText = document.createTextNode("VS");
-    const teamContainer = document.createElement("div");
-    teamContainer.classList.add("teamContainer");
     button.classList.add("matchButton");
 
-    // H2 element will be placed in the button
-    button.appendChild(VSTextEl);
-    // This H2 gets the right tekst in it
-    VSTextEl.appendChild(VSText);
-
-    homeP.appendChild(homeText);
-    visitorP.appendChild(visitorsText);
-
-    // Div element will be placed in the button and will recieve a home and visitors tekst
-    button.appendChild(teamContainer);
-    teamContainer.appendChild(homeP);
-    teamContainer.appendChild(visitorP);
-
-    // This button will be placed in its container
+    const buttonContent = `
+      <h2>VS</h2>
+      <div class="teamContainer">
+        <p>${item.home_team.full_name}</p>
+        <p>${item.visitor_team.full_name}</p>
+      </div>
+    `;
+    button.innerHTML = buttonContent;
     button.setAttribute("name", item.id);
+
     container.appendChild(button);
   });
   getOverlay(data);
 }
 
+/**
+ *
+ * @param {object} data
+ */
 function getOverlay(data) {
   const overlay = document.getElementById("overlay");
   const buttons = document.querySelectorAll(".matchButton");
@@ -62,10 +60,27 @@ function getOverlay(data) {
       localStorage.setItem("gameId", gameAtribute);
       console.log(localStorage);
       getOverlayData(data);
+      removeOverlay();
     });
   });
 }
 
+function removeOverlay() {
+  const overlay = document.getElementById("overlay");
+  const closeOverlayButton = document.getElementById("close-overlay-btn");
+
+  overlay.addEventListener("click", () => {
+    overlay.classList.remove("show");
+  });
+  closeOverlayButton.addEventListener("click", () => {
+    overlay.classList.remove("show");
+  });
+}
+
+/**
+ *
+ * @param {object} data
+ */
 function getOverlayData(data) {
   const matches = data.data;
   matches.map((match) => {
@@ -75,6 +90,10 @@ function getOverlayData(data) {
   });
 }
 
+/**
+ *
+ * @param {object} data
+ */
 function fillOverlayWithData(match) {
   const homeTitle = document.getElementById("home-title");
   const visitorTitle = document.getElementById("visitor-title");
@@ -82,9 +101,16 @@ function fillOverlayWithData(match) {
   const homeScore = document.getElementById("home-score");
   const visitorScore = document.getElementById("visitor-score");
 
+  const matchSeason = document.getElementById("match-season");
+  const matchDate = document.getElementById("match-date");
+
   homeTitle.innerText = match.home_team.full_name;
   visitorTitle.innerText = match.visitor_team.full_name;
 
   homeScore.innerText = match.home_team_score;
   visitorScore.innerText = match.visitor_team_score;
+
+  matchSeason.innerText = "Season: " + match.season;
+
+  matchDate.innerText = match.date;
 }

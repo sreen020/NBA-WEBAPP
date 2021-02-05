@@ -34,17 +34,25 @@ body {
 /* OVERLAY */
 #overlay {
   display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 #overlay.show {
-  position: fixed;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#overlay.show .overlay-container {
+  display: flex;
+  position: fixed;
   flex-direction: column;
-  top: 7rem;
-  left: 0;
-  width: 100%;
+  width: 96%;
   background-color: #fff;
   padding: 2rem;
-  border: 3px solid #051c2d;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
