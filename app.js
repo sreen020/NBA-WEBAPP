@@ -16,7 +16,6 @@ getData();
  * @param {object} data
  */
 function main(data) {
-  console.log(data);
   showMatches(data);
 }
 
@@ -58,7 +57,6 @@ function getOverlay(data) {
       const gameAtribute = button.getAttribute("name");
       overlay.classList.toggle("show");
       localStorage.setItem("gameId", gameAtribute);
-      console.log(localStorage);
       getOverlayData(data);
       removeOverlay();
     });
@@ -102,7 +100,8 @@ function fillOverlayWithData(match) {
   const visitorScore = document.getElementById("visitor-score");
 
   const matchSeason = document.getElementById("match-season");
-  const matchDate = document.getElementById("match-date");
+
+  getReadableDate(match);
 
   homeTitle.innerText = match.home_team.full_name;
   visitorTitle.innerText = match.visitor_team.full_name;
@@ -111,6 +110,14 @@ function fillOverlayWithData(match) {
   visitorScore.innerText = match.visitor_team_score;
 
   matchSeason.innerText = "Season: " + match.season;
+}
 
-  matchDate.innerText = match.date;
+function getReadableDate(match) {
+  const matchDate = document.getElementById("match-date");
+
+  const year = match.date.slice(0, 4);
+  const month = match.date.slice(5, 7);
+  const day = match.date.slice(8, 10);
+  const fullDate = day + "-" + month + "-" + year;
+  matchDate.innerText = fullDate;
 }

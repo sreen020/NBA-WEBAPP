@@ -15,6 +15,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* IMAGE CONTAINER  */
+.image-container {
+  background-color: #fff;
+}
+.image-container img {
+  width: 100%;
+}
+.image-container h1 {
+  padding: 1rem;
+  color: #00477b;
+}
+
 /* MATCH CONTAINER */
 #match-container {
   display: flex;
@@ -71,12 +83,6 @@ body {
   justify-content: space-between;
   padding-bottom: 1rem;
 }
-
-#visitor-title,
-#visitor-score {
-  text-align: right;
-}
-
 .home-container,
 .visitor-container {
   width: 50%;
@@ -84,11 +90,17 @@ body {
 
 .score-container h2 {
   font-weight: 200;
+  min-height: 5rem;
 }
 
 .score-container h1 {
   font-size: 3rem;
   color: #00477b;
+}
+
+#visitor-title,
+#visitor-score {
+  text-align: right;
 }
 
 #visitor-score {
@@ -108,6 +120,10 @@ body {
 }
 .matchButton h2 {
   color: #00477b;
+}
+#match-season {
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .teamContainer {
