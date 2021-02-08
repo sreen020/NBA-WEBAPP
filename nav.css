@@ -88,3 +88,11 @@
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}

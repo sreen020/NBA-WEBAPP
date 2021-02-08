@@ -1,37 +1,43 @@
-const self = this;
-
-console.log(document.querySelectorAll("div"));
-
 routie({
   home: function () {
     const route = this.path;
-    self.toggle(route);
+    toggle(route);
   },
   games: function () {
     const route = this.path;
-    self.toggle(route);
+    toggle(route);
   },
   teams: function () {
     const route = this.path;
-    self.toggle(route);
+    toggle(route);
   },
   stats: function () {
     const route = this.path;
-    self.toggle(route);
+    toggle(route);
   },
 });
 
 function toggle(route) {
-  this.hide();
-  this.show(route);
+  hide();
+  show(route);
 }
 function hide() {
-  const sections = document.querySelectorAll("section");
-  sections.forEach(function (element) {
-    element.classList.remove("active");
+  const sections = document.getElementsByTagName("section");
+  Object.values(sections).map((item, index) => {
+    item.classList.remove("active");
   });
 }
 function show(route) {
-  console.log("." + route);
-  document.querySelector("." + route).classList.add("active");
+  document.getElementsByClassName(route)[0].classList.add("active");
+}
+removeOverlayAfterClick();
+function removeOverlayAfterClick() {
+  const buttons = document.querySelectorAll("ul a");
+  const input = document.querySelectorAll("#menuToggle input");
+
+  buttons.forEach(function (item) {
+    item.addEventListener("click", () => {
+      input[0].checked = false;
+    });
+  });
 }
