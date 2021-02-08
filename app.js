@@ -18,6 +18,8 @@ getData();
  */
 function main(data) {
   showMatches(data);
+  getOverlay(data);
+  removeOverlay();
 }
 
 /**
@@ -43,7 +45,6 @@ function showMatches(data) {
 
     container.appendChild(button);
   });
-  getOverlay(data);
 }
 
 /**
@@ -59,7 +60,6 @@ function getOverlay(data) {
       overlay.classList.toggle("show");
       localStorage.setItem("gameId", gameAtribute);
       getOverlayData(data);
-      removeOverlay();
     });
   });
 }
@@ -96,13 +96,9 @@ function getOverlayData(data) {
 function fillOverlayWithData(match) {
   const homeTitle = document.getElementById("home-title");
   const visitorTitle = document.getElementById("visitor-title");
-
   const homeScore = document.getElementById("home-score");
   const visitorScore = document.getElementById("visitor-score");
-
   const matchSeason = document.getElementById("match-season");
-
-  getReadableDate(match);
 
   homeTitle.innerText = match.home_team.full_name;
   visitorTitle.innerText = match.visitor_team.full_name;
@@ -111,6 +107,8 @@ function fillOverlayWithData(match) {
   visitorScore.innerText = match.visitor_team_score;
 
   matchSeason.innerText = "Season: " + match.season;
+
+  getReadableDate(match);
 }
 
 function getReadableDate(match) {

@@ -8,6 +8,9 @@ nav {
   background-color: #051c2d;
   padding: 0.7rem;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {
@@ -26,6 +29,7 @@ main {
 /* IMAGE CONTAINER  */
 .image-container {
   background-color: #fff;
+  margin-bottom: 0.2rem;
 }
 .image-container img {
   width: 100%;
@@ -140,4 +144,12 @@ main {
   flex-direction: column;
   padding-left: 2rem;
   font-size: 0.9rem;
+}
+
+.matchButton {
+  cursor: pointer;
+}
+
+.matchButton:hover {
+  background-color: #eaeaea;
 }
