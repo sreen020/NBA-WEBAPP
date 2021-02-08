@@ -14,7 +14,9 @@
     <title>NBA WebApp</title>
   </head>
   <body>
-    <script src="app.js"></script>
+    <script src="js/routie.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
 
     <nav role="navigation">
       <svg
@@ -44,28 +46,42 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>Games</li></a>
-          <a href="#"><li>Teams</li></a>
-          <a href="#"><li>Stats</li></a>
+          <a href="#home"><li>Home</li></a>
+          <a href="#games"><li>Games</li></a>
+          <a href="#teams"><li>Teams</li></a>
+          <a href="#stats"><li>Stats</li></a>
         </ul>
       </div>
     </nav>
 
     <main>
-      <section class="image-container">
-        <img src="img/header-img.jpg" alt="Header image of NBA players" />
-        <h1>Games played</h1>
+      <section class="games">
+        <div class="image-container">
+          <img src="img/header-img.jpg" alt="Header image of NBA players" />
+          <h1>Games played</h1>
+        </div>
+        <div id="match-container"></div>
       </section>
-      <section id="match-container"></section>
+
+      <section class="home">
+        <h1>ADASDASD</h1>
+      </section>
+
+      <section class="teams">
+        <h1>ADASDASD</h1>
+      </section>
+
+      <section class="stats">
+        <h1>ADASDASD</h1>
+      </section>
     </main>
 
     <div id="overlay">
-      <section class="overlay-container">
+      <div class="overlay-container">
         <div class="overlay-header">
           <button id="close-overlay-btn">Terug naar overzicht</button>
         </div>
-        <section>
+        <div>
           <p id="match-season"></p>
           <p id="match-date"></p>
           <div class="match-status">
@@ -81,8 +97,8 @@
               <h1 id="visitor-score">23</h1>
             </div>
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
