@@ -1,3 +1,5 @@
+import router from "./router.js";
+
 function getData() {
   // "https://free-nba.p.rapidapi.com/games?page=0&team_ids=1%2C2%2C3&per_page=25",
   fetch("https://free-nba.p.rapidapi.com/games?team_ids=2&per_page=25", {
@@ -20,6 +22,7 @@ function main(data) {
   showMatches(data);
   getOverlay(data);
   removeOverlay();
+  router();
 }
 
 /**
