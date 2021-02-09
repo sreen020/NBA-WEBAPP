@@ -1,0 +1,32 @@
+.teams {
+  padding: 1.5rem;
+}
+.teams-title {
+  padding-bottom: 1.5rem;
+}
+#teams-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#teams-container article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002f51;
+  width: 48%;
+  margin-bottom: 1rem;
+  min-height: 7rem;
+  padding: 1rem;
+}
+
+#teams-container article:hover {
+  background-color: #00477b;
+}
+
+#teams-container article h1 {
+  color: #e1e1e1;
+  text-align: center;
+}

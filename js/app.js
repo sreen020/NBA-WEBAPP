@@ -1,4 +1,5 @@
 import router from "./router.js";
+import getTeams from "./getTeams.js";
 
 function getData() {
   // "https://free-nba.p.rapidapi.com/games?page=0&team_ids=1%2C2%2C3&per_page=25",
