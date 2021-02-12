@@ -16,7 +16,18 @@ export default function router() {
       const route = this.path;
       toggle(route);
     },
+
+    "teams/:id": (id) => {
+      addSection(id);
+      toggle(id);
+    },
   });
+
+  function addSection(id) {
+    const teamSection = document.querySelector("#specific-team-section");
+    teamSection.classList = "";
+    teamSection.classList.add(id);
+  }
 
   function toggle(route) {
     hide();
@@ -31,6 +42,7 @@ export default function router() {
   function show(route) {
     document.getElementsByClassName(route)[0].classList.add("active");
   }
+
   removeOverlayAfterClick();
 
   function removeOverlayAfterClick() {

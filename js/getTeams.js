@@ -16,14 +16,17 @@ export default function getTeams(data) {
 }
 
 function showTeams(data) {
+  console.log(data);
   const teams = data.data;
   const teamElement = document.getElementById("teams-container");
 
   teams.map((item) => {
-    const specificTeamContainer = document.createElement("article");
+    const specificTeamContainer = document.createElement("a");
     const teamContent = `
       <h1>${item.full_name}</h1>
   `;
+
+    specificTeamContainer.setAttribute("href", "#teams/" + item.abbreviation);
 
     specificTeamContainer.innerHTML = teamContent;
     teamElement.appendChild(specificTeamContainer);

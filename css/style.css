@@ -14,7 +14,6 @@ nav {
 }
 
 body {
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -24,6 +23,10 @@ body {
 
 main {
   max-width: min(100%, 45rem);
+}
+
+.games {
+  background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 /* IMAGE CONTAINER  */
