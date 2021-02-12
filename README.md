@@ -38,5 +38,11 @@ python -m SimpleHTTPServer 8000
 Now you can open http://localhost:8000/ in your browser to view the web application.
 
 ## API
+This API contains information about the most popular basketball league, the NBA. Within this API there is a lot of data. Data from each player, data from each team and data from each game. 
+
+There are more APIs who can get this data but most of them aren’t free. This one is!
+
+To find out more about this API, read more on:
+https://rapidapi.com/theapiguy/api/free-nba/details
 
 ## Diagrams
