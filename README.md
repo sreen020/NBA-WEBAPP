@@ -36,3 +36,7 @@ This will start a python server.
 python -m SimpleHTTPServer 8000
 ```
 Now you can open http://localhost:8000/ in your browser to view the web application.
+
+## API
+
+## Diagrams
