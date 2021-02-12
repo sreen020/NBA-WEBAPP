@@ -46,3 +46,6 @@ To find out more about this API, read more on:
 https://rapidapi.com/theapiguy/api/free-nba/details
 
 ## Diagrams
+
+Actor diagram:
+
