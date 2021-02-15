@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/teams.css" />
+    <link rel="stylesheet" href="css/players.css" />
+    <link rel="stylesheet" href="css/loader.css" />
     <title>NBA WebApp</title>
 
     <script src="js/routie.js" defer></script>
@@ -49,7 +51,6 @@
           <a href="#home"><li>Home</li></a>
           <a href="#games"><li>Games</li></a>
           <a href="#teams"><li>Teams</li></a>
-          <a href="#stats"><li>Stats</li></a>
         </ul>
       </div>
     </nav>
@@ -75,12 +76,12 @@
         <div id="teams-container"></div>
       </section>
 
-      <section class="stats">
-        <h1>STATS</h1>
-      </section>
-
       <section id="specific-team-section">
-        <h1>SPECIFIC TEAM PAGES</h1>
+        <h1 id="team-title"></h1>
+        <div class="player-details">
+          <p>Player</p>
+          <p>Position</p>
+        </div>
       </section>
     </main>
 
@@ -106,6 +107,13 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="loader">
+      <div class="spinner">
+        <div></div>
+        <div></div>
       </div>
     </div>
     <script src="js/routie.js"></script>

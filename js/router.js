@@ -1,4 +1,7 @@
-export default function router() {
+import filterPlayers from "./filterPlayerData.js";
+import renderPlayerData from "./renderPlayers.js";
+
+export default function router(playerData) {
   routie({
     home: function () {
       const route = this.path;
@@ -12,14 +15,12 @@ export default function router() {
       const route = this.path;
       toggle(route);
     },
-    stats: function () {
-      const route = this.path;
-      toggle(route);
-    },
 
     "teams/:id": (id) => {
       addSection(id);
       toggle(id);
+      const filtered = filterPlayers(playerData, id);
+      renderPlayerData(filtered);
     },
   });
 

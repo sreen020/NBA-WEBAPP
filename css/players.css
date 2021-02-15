@@ -1,0 +1,32 @@
+#specific-team-section {
+}
+
+#team-title {
+  padding: 1rem 2rem;
+  font-size: 3rem;
+}
+
+.player-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.playerContainer {
+  background-color: #002f51;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.playerContainer p:first-child {
+  font-weight: 300;
+}
+.playerContainer p:last-child {
+  font-weight: 800;
+}
