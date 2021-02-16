@@ -2,6 +2,7 @@
  *
  * @param {string} key
  */
+// logic for loader
 export default function loader(key) {
   const loader = document.getElementById("loader");
 

@@ -7,10 +7,11 @@ export default async function fetchPlayerData() {
   let allData = [];
   let morePagesAvailable = true;
   let currentPage = 0;
-  let totalPages = 1;
+  let totalPages = 1; // change this for more players note: app performance will be adjustd
 
   loader("show");
 
+  // this while loop makes a API call for each APIpage and will be returned
   while (morePagesAvailable) {
     currentPage++;
     const response = await fetch(

@@ -7,6 +7,25 @@ export default function matchesInit(data) {
    *
    * @param {object} data
    */
+  // this function will open a modal and will store the selected team in the localstorage
+  function getOverlay(data) {
+    const overlay = document.getElementById("overlay");
+    const buttons = document.querySelectorAll(".matchButton");
+    Array.prototype.forEach.call(buttons, function (button) {
+      button.addEventListener("click", () => {
+        const gameAtribute = button.getAttribute("name");
+        overlay.classList.toggle("show");
+        localStorage.setItem("gameId", gameAtribute);
+        getOverlayData(data);
+      });
+    });
+  }
+
+  /**
+   *
+   * @param {object} data
+   */
+  // this function will create the content of the modal
   function showMatches(data) {
     const container = document.getElementById("match-container");
     const matches = data.data;
@@ -30,24 +49,8 @@ export default function matchesInit(data) {
 
   /**
    *
-   * @param {object} data
    */
-  function getOverlay(data) {
-    const overlay = document.getElementById("overlay");
-    const buttons = document.querySelectorAll(".matchButton");
-    Array.prototype.forEach.call(buttons, function (button) {
-      button.addEventListener("click", () => {
-        const gameAtribute = button.getAttribute("name");
-        overlay.classList.toggle("show");
-        localStorage.setItem("gameId", gameAtribute);
-        getOverlayData(data);
-      });
-    });
-  }
-
-  /**
-   *
-   */
+  // the modal removes after clicking on the screen or on the close button
   function removeOverlay() {
     const overlay = document.getElementById("overlay");
     const closeOverlayButton = document.getElementById("close-overlay-btn");
@@ -64,6 +67,7 @@ export default function matchesInit(data) {
    *
    * @param {object} data
    */
+  // this previously stored data get compared with the teams and the spicific team data will be showed
   function getOverlayData(data) {
     const matches = data.data;
     matches.map((match) => {
@@ -77,6 +81,7 @@ export default function matchesInit(data) {
    *
    * @param {object} data
    */
+  // after finding the right data, the modal now gets filled with this data
   function fillOverlayWithData(match) {
     const homeTitle = document.getElementById("home-title");
     const visitorTitle = document.getElementById("visitor-title");
@@ -99,6 +104,7 @@ export default function matchesInit(data) {
    *
    * @param {string} match
    */
+  // instead of a timestamp this function will show a readable data: DD-MM-YYYY
   function getReadableDate(match) {
     const matchDate = document.getElementById("match-date");
 

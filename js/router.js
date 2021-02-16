@@ -32,6 +32,7 @@ export default function router(playerData) {
    *
    * @param {string} id
    */
+  // this function will remove and add the id of the chosen team to the container
   function addSection(id) {
     const teamSection = document.querySelector("#specific-team-section");
     teamSection.classList = "";
@@ -50,6 +51,7 @@ export default function router(playerData) {
   /**
    *
    */
+  // hides the current shown section
   function hide() {
     const sections = document.getElementsByTagName("section");
     Object.values(sections).map((item, index) => {
@@ -61,6 +63,7 @@ export default function router(playerData) {
    *
    * @param {string} route
    */
+  // Shows the chosen section
   function show(route) {
     document.getElementsByClassName(route)[0].classList.add("active");
   }
@@ -70,6 +73,7 @@ export default function router(playerData) {
   /**
    *
    */
+  // this function will remove the overlay
   function removeOverlayAfterClick() {
     const buttons = document.querySelectorAll("ul a");
     const input = document.querySelectorAll("#menuToggle input");

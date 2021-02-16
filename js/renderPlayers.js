@@ -10,6 +10,7 @@ export default function renderPlayerData(filteredPlayers) {
 /**
  *
  */
+// before placing the players, this function will remove the players first.
 function removeRender() {
   const removeableItems = document.querySelectorAll(".playerContainer");
 
@@ -25,6 +26,7 @@ function removeRender() {
  *
  * @param {object} filteredPlayers
  */
+// this function will render all players of the chosen team.
 function renderPlayers(filteredPlayers) {
   filteredPlayers.forEach((element) => {
     const teamTitle = document.getElementById("team-title");
