@@ -1,32 +1,39 @@
-#specific-team-section {
-}
-
 #team-title {
   padding: 1rem 2rem;
   font-size: 3rem;
+  background: #002f51;
+  color: #fff;
 }
 
 .player-details {
   display: flex;
   justify-content: space-between;
-  padding: 0.4rem 2rem;
+  padding: 0.7rem 2rem 1.5rem;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 0.8rem;
+  background: #002f51;
+  color: #fff;
 }
 
 .playerContainer {
-  background-color: #002f51;
-  color: #fff;
-  padding: 1.2rem 2rem;
+  background-color: #fff;
+  padding: 1.3rem 2rem;
   margin-bottom: 0.4rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.playerContainer:nth-child(even) {
+  background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 .playerContainer p:first-child {
-  font-weight: 300;
+  font-weight: 600;
 }
 .playerContainer p:last-child {
+  color: #002f51;
+  font-size: 1.2rem;
   font-weight: 800;
 }

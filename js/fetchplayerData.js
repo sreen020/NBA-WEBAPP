@@ -2,7 +2,7 @@ export default async function fetchPlayerData() {
   let allData = [];
   let morePagesAvailable = true;
   let currentPage = 0;
-  let totalPages = 20;
+  let totalPages = 15;
 
   const loader = document.getElementById("loader");
   loader.classList.add("show");
