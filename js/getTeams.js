@@ -2,10 +2,18 @@ import getData from "./fetchData.js";
 
 getData(getTeams, "https://free-nba.p.rapidapi.com/teams?page=0");
 
+/**
+ *
+ * @param {object} data
+ */
 export default function getTeams(data) {
   showTeams(data);
 }
 
+/**
+ *
+ * @param {object} data
+ */
 function showTeams(data) {
   const teams = data.data;
   const teamElement = document.getElementById("teams-container");

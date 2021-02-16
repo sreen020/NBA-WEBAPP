@@ -1,7 +1,9 @@
+/**
+ *
+ * @param {function} callback
+ * @param {string} url
+ */
 export default function getData(callback, url) {
-  const loader = document.getElementById("loader");
-  // loader.classList.add("show");
-
   fetch(url, {
     method: "GET",
     headers: {
@@ -11,5 +13,4 @@ export default function getData(callback, url) {
   })
     .then((response) => response.json())
     .then((data) => callback(data));
-  // loader.classList.remove("show");
 }

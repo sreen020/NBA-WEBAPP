@@ -1,11 +1,15 @@
+import loader from "./loader.js";
+
+/**
+ *
+ */
 export default async function fetchPlayerData() {
   let allData = [];
   let morePagesAvailable = true;
   let currentPage = 0;
-  let totalPages = 15;
+  let totalPages = 1;
 
-  const loader = document.getElementById("loader");
-  loader.classList.add("show");
+  loader("show");
 
   while (morePagesAvailable) {
     currentPage++;
@@ -24,6 +28,6 @@ export default async function fetchPlayerData() {
     data.data.forEach((e) => allData.unshift(e));
     morePagesAvailable = currentPage < totalPages;
   }
-  loader.classList.remove("show");
+  loader("hide");
   return allData;
 }

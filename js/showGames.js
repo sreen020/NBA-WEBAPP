@@ -45,6 +45,9 @@ export default function matchesInit(data) {
     });
   }
 
+  /**
+   *
+   */
   function removeOverlay() {
     const overlay = document.getElementById("overlay");
     const closeOverlayButton = document.getElementById("close-overlay-btn");
@@ -92,6 +95,10 @@ export default function matchesInit(data) {
     getReadableDate(match);
   }
 
+  /**
+   *
+   * @param {string} match
+   */
   function getReadableDate(match) {
     const matchDate = document.getElementById("match-date");
 

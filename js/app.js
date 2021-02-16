@@ -6,6 +6,9 @@ import matchesInit from "./showGames.js";
 
 let playerData = [];
 
+/**
+ *
+ */
 async function init() {
   playerData = await fetchPlayerData();
   getData(main, "https://free-nba.p.rapidapi.com/games?team_ids=2&per_page=25");

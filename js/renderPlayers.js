@@ -1,9 +1,16 @@
+/**
+ *
+ * @param {object} filteredPlayers
+ */
 export default function renderPlayerData(filteredPlayers) {
   removeRender();
   renderPlayers(filteredPlayers);
 }
 
-function removeRender(filteredPlayers) {
+/**
+ *
+ */
+function removeRender() {
   const removeableItems = document.querySelectorAll(".playerContainer");
 
   if (removeableItems.length > 0) {
@@ -14,6 +21,10 @@ function removeRender(filteredPlayers) {
   }
 }
 
+/**
+ *
+ * @param {object} filteredPlayers
+ */
 function renderPlayers(filteredPlayers) {
   filteredPlayers.forEach((element) => {
     const teamTitle = document.getElementById("team-title");
