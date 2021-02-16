@@ -1,0 +1,25 @@
+.news-container {
+  padding: 0rem 1rem 3rem;
+}
+
+.news-container article {
+  padding: 2rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.news-container article h2 {
+  color: #00477b;
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.news-container article img {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.news-container article p {
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+}
