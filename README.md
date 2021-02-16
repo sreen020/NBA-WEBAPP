@@ -13,7 +13,7 @@ This app will show the following data:
 Getting interested? Take a look!
 
 ## Live link
-https://sreen020.github.io/web-app-from-scratch-2021/
+https://sreen020.github.io/NBA-WEBAPP/
 
 
 ## Install
