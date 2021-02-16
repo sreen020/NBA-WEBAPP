@@ -13,7 +13,7 @@ This app will show the following data:
 Getting interested? Take a look!
 
 ## Live link
-**For the best performance visit the app on your phone**
+**For the best performance visit the app on your phone**<br>
 https://sreen020.github.io/NBA-WEBAPP/
 
 
