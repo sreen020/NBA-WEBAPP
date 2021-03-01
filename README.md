@@ -41,8 +41,39 @@ Now you can open http://localhost:8000/ in your browser to view the web applicat
 ## API
 This API contains information about the most popular basketball league, the NBA. Within this API there is a lot of data. Data from each player, data from each team and data from each game. 
 
+This is a snipped of the JSON I get back from the API. This example shows how I recieve the game data.
+```
+0:{
+  "id":47179
+  "date":"2019-01-30T00:00:00.000Z"
+  "home_team": {
+    "id":2
+    "abbreviation":"BOS"
+    "city":"Boston"
+    "conference":"East"
+    "division":"Atlantic"
+    "full_name":"Boston Celtics"
+    "name":"Celtics"
+  }
+  "home_team_score":126
+  "period":4
+  "postseason":false
+  "season":2018
+  "status":"Final"
+  "time":" "
+  "visitor_team": {
+    "id":4
+    "abbreviation":"CHA"
+    "city":"Charlotte"
+    "conference":"East"
+    "division":"Southeast"
+    "full_name":"Charlotte Hornets"
+    "name":"Hornets"
+}
+  "visitor_team_score":94
+}
+```
 There are more APIs who can get this data but most of them aren’t free. This one is!
-
 To find out more about this API, read more on:
 https://rapidapi.com/theapiguy/api/free-nba/details
 
