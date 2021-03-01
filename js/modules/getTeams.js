@@ -1,4 +1,4 @@
-import getData from "./fetchData.js";
+import getData from "../utils/fetchData.js";
 
 getData(getTeams, "https://free-nba.p.rapidapi.com/teams?page=0");
 

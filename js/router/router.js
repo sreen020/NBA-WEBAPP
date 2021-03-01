@@ -1,5 +1,6 @@
-import filterPlayers from "./filterPlayerData.js";
-import renderPlayerData from "./renderPlayers.js";
+import filterPlayers from "../utils/filterPlayerData.js";
+import renderPlayerData from "../modules/renderPlayers.js";
+import "../router/routie.js";
 
 /**
  *

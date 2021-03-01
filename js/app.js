@@ -1,8 +1,8 @@
-import router from "./router.js";
-import getData from "./fetchData.js";
-import fetchPlayerData from "./fetchplayerData.js";
-import getTeams from "./getTeams.js";
-import matchesInit from "./showGames.js";
+import router from "./router/router.js";
+import getData from "./utils/fetchData.js";
+import fetchPlayerData from "./utils/fetchplayerData.js";
+import getTeams from "./modules/getTeams.js";
+import matchesInit from "./modules/showGames.js";
 
 // empty array will be filled with the players
 let playerData = [];
