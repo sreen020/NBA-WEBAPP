@@ -83,7 +83,7 @@ https://rapidapi.com/theapiguy/api/free-nba/details
 ## Diagrams
 
 Actor diagram:
-![Actor diagram](https://github.com/sreen020/web-app-from-scratch-2021/blob/master/img/github-images/Actor-diagram.png)
+![Actor diagram](https://github.com/sreen020/NBA-WEBAPP/blob/master/img/github-images/actorDiagramNew.png)
 
 Interaction diagram:
 ![Interaction diagram](https://github.com/sreen020/web-app-from-scratch-2021/blob/master/img/github-images/Interaction-diagram.png)
