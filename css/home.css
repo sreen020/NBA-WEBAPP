@@ -18,7 +18,7 @@
 .news-container article h2 {
   color: #00477b;
   padding-bottom: 2rem;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .home .image-container div {
@@ -28,7 +28,7 @@
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 98.1%;
 }
 
 .news-container article img {
@@ -37,8 +37,8 @@
 }
 
 .news-container article p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-bottom: 1rem;
   font-weight: 300;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
 }

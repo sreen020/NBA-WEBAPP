@@ -6,6 +6,8 @@ import "../router/routie.js";
  *
  * @param {object} playerData
  */
+
+// i'm using normal functions instead of arrow functions to resolve routie errors
 export default function router(playerData) {
   routie({
     home: function () {

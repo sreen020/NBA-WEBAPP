@@ -11,7 +11,7 @@ export default function matchesInit(data) {
   function getOverlay(data) {
     const overlay = document.getElementById("overlay");
     const buttons = document.querySelectorAll(".matchButton");
-    Array.prototype.forEach.call(buttons, function (button) {
+    Array.prototype.forEach.call(buttons, (button) => {
       button.addEventListener("click", () => {
         const gameAtribute = button.getAttribute("name");
         overlay.classList.toggle("show");
