@@ -9,6 +9,9 @@ This app will show the following data:
 - Current NBA Teams 
 - Players per team
 
+**Screenshots app:** <br>
+<img src="https://github.com/sreen020/NBA-WEBAPP/blob/master/img/github-images/screenshot-app2.png" width="300">
+<img src="https://github.com/sreen020/NBA-WEBAPP/blob/master/img/github-images/screenshot-app.png" width="300">
 
 Getting interested? Take a look!
 
