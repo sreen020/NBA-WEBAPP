@@ -13,12 +13,13 @@ This app will show the following data:
 Getting interested? Take a look!
 
 ## Live link
+**For the best performance visit the app on your phone**<br>
 https://sreen020.github.io/NBA-WEBAPP/
 
 
 ## Install
 
-**2. Clone folder**
+**Clone folder**<br>
 Then you need to download this project and open it with your code editor. To do this, open your terminal with the correct path in which you want this repository. Example:
 
 cd/Desktop/projects/
